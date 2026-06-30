@@ -1,0 +1,44 @@
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.charts-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.duration-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.duration-input input {
+  width: 60px;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.duration-input button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.result-box {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f0f8ff;
+  border-radius: 8px;
+  display: inline-block;
+  color: #1a1a1a;
+}
