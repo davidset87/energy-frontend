@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { DailyEnergyMix, OptimalChargingWindow } from "./types";
 
-const API_BASE_URL = "http://localhost:5252/api/energy";
+const API_BASE_URL = "https://energy-api-r80i.onrender.com/api/energy";
 
 export async function getEnergyMix(): Promise<DailyEnergyMix[]> {
   const response = await axios.get<DailyEnergyMix[]>(`${API_BASE_URL}/mix`);
