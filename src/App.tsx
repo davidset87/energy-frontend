@@ -14,7 +14,6 @@ function App() {
   const [loadingWindow, setLoadingWindow] = useState(false);
   const [errorWindow, setErrorWindow] = useState<string | null>(null);
 
-  // Charger le mix énergétique au démarrage
   useEffect(() => {
     getEnergyMix()
       .then(setEnergyMix)
@@ -22,7 +21,6 @@ function App() {
       .finally(() => setLoadingMix(false));
   }, []);
 
-  // Appelé quand l'utilisateur clique sur le bouton
   async function handleCalculate() {
     setLoadingWindow(true);
     setErrorWindow(null);
@@ -49,7 +47,7 @@ function App() {
         {errorMix && <p style={{ color: "red" }}>{errorMix}</p>}
         {!loadingMix && !errorMix && (
           <div className="charts-row">
-            {energyMix.map((day, index) => (
+            {energyMix.slice(0, 3).map((day, index) => (
               <EnergyPieChart key={day.date} dayData={day} label={dayLabels[index] ?? day.date} />
             ))}
           </div>
