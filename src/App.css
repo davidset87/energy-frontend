@@ -28,10 +28,23 @@
   font-size: 1rem;
 }
 
+.duration-input input[aria-invalid="true"] {
+  border: 2px solid #d32f2f;
+}
+
 .duration-input button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.duration-input button:disabled {
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin-top: 0.75rem;
+  color: #d32f2f;
 }
 
 .result-box {
@@ -41,4 +54,44 @@
   border-radius: 8px;
   display: inline-block;
   color: #1a1a1a;
+}.pie-card {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.mix-table {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.mix-table th,
+.mix-table td {
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.35);
+}
+
+.mix-table th:last-child,
+.mix-table td:last-child {
+  text-align: right;
+}
+
+.swatch {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.5rem;
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }

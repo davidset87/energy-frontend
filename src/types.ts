@@ -1,6 +1,19 @@
+export type FuelType =
+  | "biomass"
+  | "coal"
+  | "imports"
+  | "gas"
+  | "nuclear"
+  | "other"
+  | "hydro"
+  | "solar"
+  | "wind";
+
+export type AverageMix = Partial<Record<FuelType, number>>;
+
 export interface DailyEnergyMix {
   date: string;
-  averageMix: Record<string, number>;
+  averageMix: AverageMix;
   cleanEnergyPercentage: number;
 }
 
